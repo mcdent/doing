@@ -1,6 +1,5 @@
 # doing
 ***
-
 This is a simple script which can be run from the command line / cli to add a single entry
 to your Obsidian Daily note. It is designed to be simple and fast for people working from their
 Linux / MacOS terminal frequently. It also adds a tag to the entries so you can search them all.
