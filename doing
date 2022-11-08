@@ -1,0 +1,23 @@
+#!/bin/bash
+# Simple and dirty script to quickly add a comment to your Obsidian
+# Daily note. Ensure the file is executable and put in your path somewhere.
+# You can then just call it with 'doing Adding the final touches to my plan for world domination!'
+# Edit the path and hashtag below.
+#
+# Path to your Daily notes directory
+daily_path="/Users/mikedent/Documents/Vault1/Daily"
+#daily_path="/Users/mikedent/Linux-Unix-Practice"
+#setup a hash tag to append to the comments
+hashtag="#doing"
+todays_date=`date -I`.md
+time=`date "+%H:%M:%S"`
+#
+#
+if [[ -f  $daily_path/$todays_date ]]
+then
+	echo "***" >> $daily_path/$todays_date
+	echo $time $* $hashtag >> $daily_path/$todays_date
+else
+	echo $time $* $hashtag >> $daily_path/$todays_date
+fi
+echo "<<$time $* $hashtag>> was added to your daily note."
